@@ -5,13 +5,12 @@ jobs:
     name: Build utp-main
     steps:
       - uses: actions/checkout@v3
-      - uses: lexbailey/isabelle-theory-build-github-action@main
+      - uses: lexbailey/isabelle-theory-build-github-action@v6
         with:
           isabelle-version: '2022'
           #depends: 'https://github.com/isabelle-utp/Z_Toolkit.git@main'
           depends: 'https://github.com/lexbailey/Z_Toolkit.git@main'
           session-name: 'Profiling Continuum Dynamics UTP1-Toolkit UTP1 UTP1-Calculi ZedLite UTP1-KAT UTP1-Designs UTP1-Undef UTP1-Memory UTP1-Impl UTP1-Reactive UTP1-Reactive-Designs UTP1-Time UTP1-Stateful-Failures UTP1-Circus UTP1-Deep UTP1-Axm UTP1-Deep-Axm UTP1-Theories UTP1-Hybrid-Imports UTP1-Hybrid UTP1-dL UTP1-Hybrid-Deep UTP1-Hybrid-Examples Modelica Modelica-NC VDM-SL UTP1-Tutorial RoboChart-Untimed FMI Tokeneer'
-          theory-root: '. Z'
           report_url: 'https://isabelle-utp-ci-dashboard.link/submit_job_log'
           report_secret: ${{ secrets.DashboardReportKey }}
 
